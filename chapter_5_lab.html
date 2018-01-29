@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Tax Calculator</title>
+				<style>
+					body {
+						width: 50%;
+						padding-left: 500px;
+					}
+					h1 {
+						text-align: center;
+						text-decoration: underline;
+						margin-top: 5px;
+					}
+					#form {
+						background-color: blueviolet;
+						width: 75%;
+						text-align: left;
+						padding: 5px;
+						border: 1px solid black;
+					}
+					.label {
+						font-size: 20px;
+						font-weight: bold;
+					}
+					.input[type=text], select {
+						text-align: left;
+						width: 100%;
+						padding: 12px 25px;
+						margin: 8px 0;
+						display: inline-block;
+						border: 2px solid #ccc;
+						border-radius: 4px;
+						box-sizing: border-box;
+					}
+					#btnSubmit {
+						width: 45%;
+						background-color: darkgrey;
+						color: black;
+						font-weight: bold;
+						font-size: 15px;
+						padding: 14px 20px;
+						margin: 10px 0 0 25px;
+						border: 1px solid black;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+					#btnSubmit:hover {
+						background-color: #000;
+						color: blueviolet;
+					}
+					#btnReset {
+						width: 45%;
+						background-color: darkgrey;
+						color: black;
+						font-weight: bold;
+						font-size: 15px;
+						padding: 14px 10px;
+						margin: 8px 0;
+						border: 1px solid black;
+						border-radius: 4px;
+						cursor: pointer;
+					}
+					#btnReset:hover {
+						background-color: #000;
+						color: blueviolet;
+					}
+				</style>
+
+</head>
+
+<body>
+	<div id="form">
+	<h1>TAX CALCULATOR</h1>
+	<form action="calculatorTax.php" method="POST">
+		<label for="fname" class="label">First Name:</label>
+		<input type="text" id="fname" name="fname" class="input" placeholder="FIRST NAME"><br>
+
+		<label for="lname" class="label">Last Name:</label>
+		<input type="text" id="lname" name="lname" class="input" placeholder="LAST NAME"><br>
+
+		<label for="income" class="label">Annual Income Between:</label>
+		<select type="text" id="income" name="income" class="input">
+			<option value="&lt 25000">$25,000 Or Less</option>
+			<option value="&lt 45000">$25,000 to $45,000</option>
+			<option value="&lt 65000">$45,000 to $65,000</option>
+			<option value="&lt 90000">$65,000 to $90,000</option>
+			<option value="&lt 140000">$90,000 to $140,000</option>
+			<option value="&lt 200000">$140,000 to $200,00</option>
+			<option value="&lt 1000000">$200,000 to $1,000,000</option>
+			<option value="&lt 1000000">Greater Than $1,000,000</option>
+		</select>
+		<button type="submit" value="send" id="btnSubmit">Calculate Tax</button>
+		<button type="reset" id="btnReset">Reset Form</button>
+	</form>
+	</div>
+</body>
+</html>
